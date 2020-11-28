@@ -28,10 +28,10 @@ jobs:
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
           mkdir site
-          cp index.html site/index.html
-          cp image/* site/image/
-          cp Semantic/* site/Semantic/
-          cp JudgeOnline/* site/JudgeOnline/
+          mv index.html site
+          mv image site
+          mv Semantic site
+          mv JudgeOnline site
           
       - name: Release
         uses: JamesIves/github-pages-deploy-action@3.6.2
